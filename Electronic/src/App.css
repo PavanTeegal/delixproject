@@ -1,0 +1,190 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  width:100%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:16px 40px;
+
+  background:#111827;
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+  color:white;
+
+  font-size:30px;
+  font-weight:800;
+
+  white-space:nowrap;
+
+  cursor:pointer;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.links{
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  list-style:none;
+
+  flex-wrap:nowrap;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.links li a{
+  display:flex;
+  align-items:center;
+  gap:7px;
+
+  text-decoration:none;
+
+  color:#f3f4f6;
+
+  font-size:14px;
+  font-weight:600;
+
+  padding:10px 14px;
+
+  border-radius:10px;
+
+  transition:0.3s ease;
+
+  white-space:nowrap;
+}
+
+.links li a:hover{
+  background:#2563eb;
+
+  color:white;
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart-link a{
+  background:#f97316;
+
+  color:white !important;
+}
+
+.cart-link a:hover{
+  background:#ea580c !important;
+}
+
+/* =========================
+   USER NAME
+========================= */
+
+.welcome-user{
+  background:#22c55e;
+
+  color:white;
+
+  padding:10px 14px;
+
+  border-radius:10px;
+
+  font-size:14px;
+  font-weight:700;
+
+  white-space:nowrap;
+}
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
+.logout-btn{
+  border:none;
+
+  background:#ef4444;
+
+  color:white;
+
+  padding:10px 16px;
+
+  border-radius:10px;
+
+  font-size:14px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+
+  white-space:nowrap;
+}
+
+.logout-btn:hover{
+  background:#dc2626;
+}
+
+/* =========================
+   LARGE SCREEN FIX
+========================= */
+
+@media(max-width:1200px){
+
+  .navbar{
+    padding:14px 20px;
+  }
+
+  .links{
+    gap:6px;
+  }
+
+  .links li a{
+    font-size:13px;
+
+    padding:9px 10px;
+  }
+
+  .logo{
+    font-size:24px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+  .navbar{
+    flex-direction:column;
+
+    gap:15px;
+  }
+
+  .links{
+    width:100%;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+  }
+}

@@ -1,0 +1,303 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.laptop-container {
+  width: 100%;
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #708090,#F5DEB3);
+
+  display: flex;
+  justify-content: center;
+
+  padding: 35px 25px;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.laptop-page {
+  width: 100%;
+  max-width: 1500px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.laptop-title {
+  text-align: center;
+  font-size: 46px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 55px;
+  position: relative;
+}
+
+.laptop-title span {
+  color: #ff5722;
+}
+
+.laptop-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 6px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ff7a18, #ff3d00);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.laptop-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 35px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.laptop-card {
+  width: 100%;
+
+  background: #fff;
+
+  border-radius: 26px;
+
+  padding: 24px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.laptop-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+}
+
+/* =========================
+   IMAGE BOX
+========================= */
+
+.laptop-img-box {
+  width: 100%;
+  height: 300px;
+
+  background: #f4eeee;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.laptop-img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: 0.4s ease;
+}
+
+.laptop-card:hover .laptop-img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.laptop-card h3 {
+  margin-top: 20px;
+
+  font-size: 26px;
+
+  color: #222;
+
+  font-weight: 800;
+}
+
+.laptop-card p {
+  margin: 12px 0;
+
+  color: #666;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+.laptop-card h4 {
+  margin-bottom: 20px;
+
+  color: #2e7d32;
+
+  font-size: 30px;
+
+  font-weight: 800;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.laptop-card button {
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #ff7a18, #ff3d00);
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.laptop-card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 22px rgba(255,61,0,0.35);
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+.laptop-pagination {
+  width: 100%;
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.laptop-pagination button {
+  min-width: 55px;
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #ffd8cc;
+  color: #222;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.laptop-pagination button:hover {
+  background: #ffb59c;
+}
+
+.laptop-active {
+  background: #ff5722 !important;
+  color: white !important;
+}
+
+.laptop-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .laptop-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .laptop-img-box {
+    height: 260px;
+  }
+
+  .laptop-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .laptop-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .laptop-img-box {
+    height: 230px;
+  }
+
+  .laptop-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .laptop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .laptop-img-box {
+    height: 260px;
+  }
+
+  .laptop-title {
+    font-size: 28px;
+  }
+}

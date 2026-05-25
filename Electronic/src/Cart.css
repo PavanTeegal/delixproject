@@ -1,0 +1,376 @@
+/* ===============================
+   GLOBAL RESET (CLEAN)
+=============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0a0a0f;
+  color: #e5e7eb;
+}
+
+/* ===============================
+   CART WRAPPER
+=============================== */
+
+.cart-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* ===============================
+   TOP ACTION
+=============================== */
+
+.cart-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   BUTTON BASE
+=============================== */
+
+button {
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* ===============================
+   CLEAR BUTTON
+=============================== */
+
+.clear-btn {
+  background: #ff3b3b;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.clear-btn:hover {
+  background: #ff1f1f;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   EMPTY CART
+=============================== */
+
+h3 {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 28px;
+  color: #9ca3af;
+}
+
+/* ===============================
+   CART LIST
+=============================== */
+
+.cart-list {
+  list-style: none;
+}
+
+/* ===============================
+   CART ITEM CARD (UNIQUE LOOK)
+=============================== */
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 110px 1fr auto auto auto;
+  gap: 20px;
+  align-items: center;
+
+  background: linear-gradient(145deg, #111827, #0f172a);
+  border: 1px solid #1f2937;
+
+  padding: 18px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+
+  transition: 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+}
+
+/* ===============================
+   IMAGE
+=============================== */
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #1f2937;
+}
+
+/* ===============================
+   TEXT
+=============================== */
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.qty {
+  color: #9ca3af;
+}
+
+.price {
+  color: #22c55e;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ===============================
+   QTY BUTTONS
+=============================== */
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: white;
+}
+
+.minus {
+  background: #ef4444;
+}
+
+.plus {
+  background: #22c55e;
+}
+
+.qty-number {
+  font-weight: bold;
+}
+
+/* ===============================
+   DISCOUNT SECTION
+=============================== */
+
+.discount-section {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.discount-section button {
+  background: #111827;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  padding: 10px 16px;
+  border-radius: 10px;
+}
+
+.discount-section button:hover {
+  background: #38bdf8;
+  color: black;
+}
+
+/* ===============================
+   INPUT
+=============================== */
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #0f172a;
+  color: rgb(30, 21, 21);
+  margin-top: 12px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+/* ===============================
+   APPLY BUTTON
+=============================== */
+
+.cart-list > button {
+  margin-top: 12px;
+  background: #6366f1;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+
+.cart-list > button:hover {
+  background: #4f46e5;
+}
+
+/* ===============================
+   MESSAGE
+=============================== */
+
+.message {
+  margin-top: 12px;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ===============================
+   BILL BOX
+=============================== */
+
+.bill-box {
+  margin-top: 25px;
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.bill-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #1f2937;
+}
+
+.net-row {
+  font-size: 20px;
+  color: #38bdf8;
+  font-weight: bold;
+  border: none;
+}
+
+/* ===============================
+   LABEL
+=============================== */
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* ===============================
+   PAYMENT SECTION
+=============================== */
+
+.payment-container {
+  width: 95%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+
+  background: #0f172a;
+  border-radius: 16px;
+  border: 1px solid #1f2937;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   PAYMENT BUTTONS
+=============================== */
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.pay-btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.pay-btn.active,
+.pay-btn:hover {
+  background: #38bdf8;
+  color: black;
+}
+
+/* ===============================
+   QR BOX
+=============================== */
+
+.qr-box {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* ===============================
+   CHECKOUT BUTTON
+=============================== */
+
+.payment-container button:last-child {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  font-weight: bold;
+}
+
+.payment-container button:last-child:hover {
+  transform: translateY(-3px);
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 768px) {
+  .cart-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .qty-controls {
+    justify-content: center;
+  }
+
+  .discount-section {
+    flex-direction: column;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+}

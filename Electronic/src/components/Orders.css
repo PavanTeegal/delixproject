@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.orders-container{
+  width:95%;
+  max-width:1200px;
+  margin:25px auto;
+  padding:15px;
+}
+
+/* =========================================
+   TITLE (SAFE - NO ERROR MARKS)
+========================================= */
+
+.orders-title{
+  text-align:center;
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:25px;
+  color:#66a3a1;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-orders{
+  background:#111;
+  border:1px solid #1f1f1f;
+  border-radius:16px;
+  padding:50px 20px;
+  text-align:center;
+  font-size:22px;
+  font-weight:600;
+  color:#888;
+}
+
+/* =========================================
+   ORDER LIST
+========================================= */
+
+.orders-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+/* =========================================
+   ORDER CARD (SMALL SIZE)
+========================================= */
+
+.order-card{
+  background:#111;
+  border:1px solid #1f1f1f;
+  border-radius:16px;
+  padding:15px;
+  max-width:900px;
+  margin:auto;
+  transition:0.3s ease;
+}
+
+.order-card:hover{
+  transform:translateY(-4px);
+  border-color:#00e5ff;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.order-header{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+  padding-bottom:12px;
+  border-bottom:1px solid #222;
+}
+
+.order-id{
+  font-size:15px;
+  font-weight:600;
+  color:#00e5ff;
+}
+
+.order-date{
+  font-size:13px;
+  color:#aaa;
+}
+
+/* =========================================
+   ITEMS GRID (COMPACT)
+========================================= */
+
+.order-items{
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+/* =========================================
+   ITEM CARD
+========================================= */
+
+.order-item{
+  background:#0c0c0c;
+  border:1px solid #1f1f1f;
+  border-radius:14px;
+  padding:12px;
+  text-align:center;
+  transition:0.3s ease;
+}
+
+.order-item:hover{
+  transform:translateY(-3px);
+  border-color:#2600ff;
+}
+
+/* =========================================
+   IMAGE (SMALL)
+========================================= */
+
+.order-img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* =========================================
+   ITEM TEXT
+========================================= */
+
+.item-name{
+  margin-top:10px;
+  font-size:15px;
+  font-weight:600;
+}
+
+.item-price{
+  margin-top:6px;
+  font-size:13px;
+  color:#00ff99;
+  font-weight:600;
+}
+
+/* =========================================
+   TOTAL BOX
+========================================= */
+
+.order-total{
+  margin-top:15px;
+  background:#0a0a0a;
+  border:1px solid #1f1f1f;
+  padding:12px;
+  border-radius:12px;
+  text-align:center;
+  font-size:16px;
+  font-weight:700;
+  color:#00e5ff;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+  .orders-title{
+    font-size:24px;
+  }
+
+  .order-header{
+    flex-direction:column;
+  }
+
+  .order-items{
+    grid-template-columns:1fr;
+  }
+
+  .order-img{
+    height:130px;
+  }
+}
