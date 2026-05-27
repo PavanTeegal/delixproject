@@ -33,6 +33,7 @@ import Orders from "./components/Orders";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Contactus from "./components/Contactus";
+import Notfound from "./components/Notfound";
 
 function App() {
 
@@ -229,6 +230,10 @@ function App() {
             element={<Contactus />}
           />
 
+          <Route
+  path="/*"
+  element={<Notfound />}
+/>
         </Routes>
 
       </BrowserRouter>
